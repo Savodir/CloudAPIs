@@ -15,6 +15,8 @@ import { IMDBService } from './services/imdbservice';
 import { ImdbsearchComponent } from './imdb/imdbsearch/imdbsearch.component';
 import { ImdbposterComponent } from './imdb/imdbposter/imdbposter.component';
 import { ImdbsearchbyidComponent } from './imdb/imdbsearchbyid/imdbsearchbyid.component';
+import { ImdbpaginationComponent } from './imdbpagination/imdbpagination.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,10 +27,12 @@ import { ImdbsearchbyidComponent } from './imdb/imdbsearchbyid/imdbsearchbyid.co
     IMDBComponent,
     ImdbsearchComponent,
     ImdbposterComponent,
-    ImdbsearchbyidComponent
+    ImdbsearchbyidComponent,
+    ImdbpaginationComponent
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     MDBBootstrapModule.forRoot(),
     AgmCoreModule.forRoot({
      apiKey: 'AIzaSyB24fQ8s1VLrw6EhUsyQP74eLvMWE1LYTw'
@@ -36,6 +40,7 @@ import { ImdbsearchbyidComponent } from './imdb/imdbsearchbyid/imdbsearchbyid.co
     RouterModule.forRoot([
       {path: "home", component: HomeComponent},
       {path: "imdb", component: IMDBComponent},
+      {path: "imdbpagination", component: ImdbpaginationComponent},
       {path: "", component: HomeComponent},
       {path: "**", component: PageNotFoundComponent}
     ], {useHash: true}),

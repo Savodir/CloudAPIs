@@ -1,0 +1,20 @@
+<div class="card" style="text-align: center;">
+  <div class="card-body">
+      <div class="table-wrapper-2">
+          <input type="text" class="form-control" [(ngModel)]="Search">
+          <div *ngIf = "result.Search" class="wrapper1">
+              <ul>
+                  <li *ngFor="let item of result.Search | paginate: { itemsPerPage:1, currentPage: p }">
+                      <img src="{{item.Poster}}"> <br>
+                     Title: {{item.Title}} <br>
+                     Year: {{item.Year}} <br>
+                     IMDB ID: {{item.imdbID}} <br>
+                      Type: {{item.Type}} <br>
+                      </li> 
+                      </ul> 
+                <pagination-controls (pageChange)="p =$event"></pagination-controls>
+                Showing maximum 10 results
+        </div>
+      </div>
+  </div>
+</div>

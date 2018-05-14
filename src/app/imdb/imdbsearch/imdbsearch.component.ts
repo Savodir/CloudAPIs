@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ImdbsearchComponent {
 
   constructor(private http: HttpClient) {}
-  private _search: string = "Search by "
+  private _search: string = ""
   title = "";
   result;
   searchTitle(replaced: string) {

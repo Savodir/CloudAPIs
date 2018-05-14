@@ -17,6 +17,7 @@ import { ImdbposterComponent } from './imdb/imdbposter/imdbposter.component';
 import { ImdbsearchbyidComponent } from './imdb/imdbsearchbyid/imdbsearchbyid.component';
 import { ImdbpaginationComponent } from './imdbpagination/imdbpagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { AboutMeComponent } from './about-me/about-me.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ImdbsearchComponent,
     ImdbposterComponent,
     ImdbsearchbyidComponent,
-    ImdbpaginationComponent
+    ImdbpaginationComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,8 @@ import { ImdbsearchbyidComponent } from './imdb/imdbsearchbyid/imdbsearchbyid.co
 import { ImdbpaginationComponent } from './imdbpagination/imdbpagination.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { CallbackComponent } from './callback/callback.component';
+import { AuthService } from './auth/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     ImdbposterComponent,
     ImdbsearchbyidComponent,
     ImdbpaginationComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -43,9 +46,10 @@ import { AboutMeComponent } from './about-me/about-me.component';
       {path: "home", component: HomeComponent},
       {path: "imdb", component: IMDBComponent},
       {path: "imdbpagination", component: ImdbpaginationComponent},
+      {path: "callback", component: CallbackComponent },
       {path: "", component: HomeComponent},
       {path: "**", component: PageNotFoundComponent}
-    ], {useHash: true}),
+    ]),
     FormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
@@ -54,7 +58,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
-    IMDBService
+    IMDBService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

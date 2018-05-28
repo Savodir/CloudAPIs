@@ -13,10 +13,10 @@
          <a [routerLink]="['/home']" class="nav-link waves-light" mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
      </li>
      <li class="nav-item" [routerLinkActive]="['active']">
-         <a [routerLink]="['/imdb']" class="nav-link waves-light" mdbRippleRadius>IMDB</a>
+         <a *ngIf="auth.isAuthenticated()" [routerLink]="['/imdb']" class="nav-link waves-light" mdbRippleRadius>IMDB</a>
      </li>
      <li class="nav-item" [routerLinkActive]="['active']">
-         <a [routerLink]="['/imdbpagination']" class="nav-link waves-light" mdbRippleRadius>IMDB Pagination</a>
+         <a *ngIf="auth.isAuthenticated()" [routerLink]="['/imdbpagination']" class="nav-link waves-light" mdbRippleRadius>IMDB Pagination</a>
      </li>
      <button id="qsLoginBtn"
      class="btn btn-primary my-2 my-sm-0"

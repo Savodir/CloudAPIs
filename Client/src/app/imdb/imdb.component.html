@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="auth.isAuthenticated()" class="container">
         <div class="row">
             <div class="col-sm-6 col-md-8 ">
                 <app-imdbsearch></app-imdbsearch>
@@ -13,4 +13,5 @@
             </div>
         </div>
     </div>
+
     

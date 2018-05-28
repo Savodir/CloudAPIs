@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http, Response } from "@angular/http";
 import { HttpClient } from '@angular/common/http';
+import {AuthService } from '../auth/auth.service';
 import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-imdbpagination',
@@ -10,7 +11,7 @@ import 'rxjs/add/operator/map';
 export class ImdbpaginationComponent  {
 
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, public auth: AuthService) {}
   private _search: string = "Search by "
   title = "";
   result;

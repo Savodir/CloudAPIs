@@ -1,4 +1,4 @@
-<div class="card" style="text-align: center;">
+<div *ngIf="auth.isAuthenticated()" class="card" style="text-align: center;">
   <div class="card-body">
       <div class="table-wrapper-2">
           <input type="text" class="form-control" [(ngModel)]="Search">
@@ -18,3 +18,4 @@
       </div>
   </div>
 </div>
+<div *ngIf="!auth.isAuthenticated()">Please login to use this webpage</div>

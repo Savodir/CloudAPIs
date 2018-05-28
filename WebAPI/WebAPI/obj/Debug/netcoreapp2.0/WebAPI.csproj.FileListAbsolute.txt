@@ -8,3 +8,14 @@ C:\Users\CarlV\source\repos\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.Assembl
 C:\Users\CarlV\source\repos\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.AssemblyInfo.cs
 C:\Users\CarlV\source\repos\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.dll
 C:\Users\CarlV\source\repos\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.pdb
+D:\Github\CloudAPIs\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.deps.json
+D:\Github\CloudAPIs\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.runtimeconfig.json
+D:\Github\CloudAPIs\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.runtimeconfig.dev.json
+D:\Github\CloudAPIs\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.dll
+D:\Github\CloudAPIs\WebAPI\WebAPI\bin\Debug\netcoreapp2.0\WebAPI.pdb
+D:\Github\CloudAPIs\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.csprojResolveAssemblyReference.cache
+D:\Github\CloudAPIs\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.csproj.CoreCompileInputs.cache
+D:\Github\CloudAPIs\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.AssemblyInfoInputs.cache
+D:\Github\CloudAPIs\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.AssemblyInfo.cs
+D:\Github\CloudAPIs\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.dll
+D:\Github\CloudAPIs\WebAPI\WebAPI\obj\Debug\netcoreapp2.0\WebAPI.pdb

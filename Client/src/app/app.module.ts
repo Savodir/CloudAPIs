@@ -20,6 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth/auth.service';
+import { RestApiComponent } from './rest-api/rest-api.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { AuthService } from './auth/auth.service';
     ImdbsearchbyidComponent,
     ImdbpaginationComponent,
     AboutMeComponent,
-    CallbackComponent
+    CallbackComponent,
+    RestApiComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import { AuthService } from './auth/auth.service';
       {path: "imdb", component: IMDBComponent},
       {path: "imdbpagination", component: ImdbpaginationComponent},
       {path: "callback", component: CallbackComponent },
+      {path: "restAPI", component: RestApiComponent},
       {path: "", component: HomeComponent},
       {path: "**", component: PageNotFoundComponent}
     ]),

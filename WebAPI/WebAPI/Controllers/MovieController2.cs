@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Web.Http.Cors;
 namespace WebAPI.Controllers
 {
-    [Route("api/v1/books")]
+    [Route("api/v2/movies")]
     public class MovieController2 : Controller
     {
         private readonly LibraryContext context;
@@ -15,18 +15,26 @@ namespace WebAPI.Controllers
         {
             this.context = context;
         }
-        [Route("test")]
         [HttpGet]
         public List<Movie> getAllMovies()
         {
             return context.movies.ToList();
         }
-        [Route("test/{id}")]
+        [Route("i/{id}")]
         [HttpGet]
-        public Movie getMovie(int id)
+        public Movie getMovieID(int id)
         {
             var movie = context.movies.Find(id);
             return movie;
+        }
+        [Route("t/{title}")]
+        [HttpGet]
+        public List<Movie> getMovieTitle(string title, string year)
+        {
+            IQueryable<Movie> query = context.movies;
+            query = query.Where(d => d.Title == title);
+            return query.ToList();
+
         }
         [Route("post")]
         [HttpPost]
@@ -48,6 +56,21 @@ namespace WebAPI.Controllers
             context.movies.Remove(movie);
             context.SaveChanges();
             return NoContent();
+        }
+        [Route("put")]
+        [HttpPut]
+        public IActionResult UpdateMovie([FromBody] Movie updateMovie)
+        {
+            var orgMovie = context.movies.Find(updateMovie.ID);
+            if (orgMovie == null)
+                return NotFound();
+
+            orgMovie.Title = updateMovie.Title;
+            orgMovie.Year = updateMovie.Year;
+            orgMovie.Type = updateMovie.Type;
+      
+            context.SaveChanges();
+            return Ok(orgMovie);
         }
     }
 }

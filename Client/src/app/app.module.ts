@@ -21,6 +21,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthService } from './auth/auth.service';
 import { RestApiComponent } from './rest-api/rest-api.component';
+import { RestApititleSearchComponent } from './rest-api/rest-apititle-search/rest-apititle-search.component';
+import { RestApipostComponent } from './rest-api/rest-apipost/rest-apipost.component';
+import { RestApiputComponent } from './rest-api/rest-apiput/rest-apiput.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,10 @@ import { RestApiComponent } from './rest-api/rest-api.component';
     ImdbpaginationComponent,
     AboutMeComponent,
     CallbackComponent,
-    RestApiComponent
+    RestApiComponent,
+    RestApititleSearchComponent,
+    RestApipostComponent,
+    RestApiputComponent
   ],
   imports: [
     BrowserModule,

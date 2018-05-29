@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService} from '../auth/auth.service';
 
 @Component({
   selector: 'app-rest-api',
@@ -9,18 +10,9 @@ import { HttpClient } from '@angular/common/http';
 export class RestApiComponent implements OnInit {
 
   result: any;
-  constructor(private http: HttpClient) { }
-
+  constructor(public auth: AuthService) { }
+  
   ngOnInit() {
-    this.searchTitle();
   }
-  searchTitle() {
-    this.http.get(`http://localhost:50533/api/v1/books/test`)
-    .subscribe(
-      (res: Response) => {
-        this.result = res;
-        console.log(this.result)
-      }
-    )
-  }
+
 }

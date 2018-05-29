@@ -24,6 +24,7 @@ import { RestApiComponent } from './rest-api/rest-api.component';
 import { RestApititleSearchComponent } from './rest-api/rest-apititle-search/rest-apititle-search.component';
 import { RestApipostComponent } from './rest-api/rest-apipost/rest-apipost.component';
 import { RestApiputComponent } from './rest-api/rest-apiput/rest-apiput.component';
+import { RestapidelComponent } from './rest-api/restapidel/restapidel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { RestApiputComponent } from './rest-api/rest-apiput/rest-apiput.componen
     RestApiComponent,
     RestApititleSearchComponent,
     RestApipostComponent,
-    RestApiputComponent
+    RestApiputComponent,
+    RestapidelComponent
   ],
   imports: [
     BrowserModule,

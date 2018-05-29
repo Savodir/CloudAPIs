@@ -44,7 +44,7 @@ namespace WebAPI.Controllers
             context.SaveChanges();
             return Created("", newMovie);
         }
-        [Route("{id}")]
+        [Route("d/{id}")]
         [HttpDelete]
         public IActionResult deleteBook(int id)
         {

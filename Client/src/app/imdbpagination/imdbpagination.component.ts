@@ -13,10 +13,12 @@ export class ImdbpaginationComponent  {
 
   constructor(private http: HttpClient, public auth: AuthService) {}
   private _search: string = "Search by "
+  private id: number = 1;
   title = "";
   result;
+  replaced;
   searchTitle(replaced: string) {
-    this.http.get(`http://www.omdbapi.com/?s=${replaced}&page=1&apikey=8e070606`)
+    this.http.get(`http://www.omdbapi.com/?s=${replaced}&page=${this.id}&apikey=8e070606`)
     .subscribe(
       (res: Response) => {
         this.result = res;
@@ -29,7 +31,11 @@ export class ImdbpaginationComponent  {
   }
   set Search(value: string) {
     this._search = value;
-    var replaced = value.split(' ').join('+');
-    this.searchTitle(replaced);
+    this.replaced = value.split(' ').join('+');
+    this.searchTitle(this.replaced);
+  }
+  showMore() {
+    this.id++;
+    this.searchTitle(this.replaced)
   }
 }

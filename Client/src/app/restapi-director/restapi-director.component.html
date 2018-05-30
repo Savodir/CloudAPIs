@@ -6,6 +6,17 @@
       <div class="col-sm-6">
         <app-restapi-director-movie-by-id></app-restapi-director-movie-by-id>
     </div>
+    <div class="col-sm-6">
+        <app-restapi-director-post></app-restapi-director-post>
+    </div>
+    <div class="col-sm-6">
+        <app-restapi-director-put></app-restapi-director-put>
+    </div>
+    <div class="col-sm-6">
+        <app-restapi-director-del></app-restapi-director-del>
+    </div>
 </div>
 </div>
-<div *ngIf="!auth.isAuthenticated()"></div>
+<div *ngIf="!auth.isAuthenticated()">
+    Please login to use this website
+</div>

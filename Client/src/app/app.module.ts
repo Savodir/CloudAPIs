@@ -27,7 +27,10 @@ import { RestApiputComponent } from './rest-api/rest-apiput/rest-apiput.componen
 import { RestapidelComponent } from './rest-api/restapidel/restapidel.component';
 import { RestapiDirectorComponent } from './restapi-director/restapi-director.component'
 import {RestapiDirectorSearchComponent } from './restapi-director/restapi-director-search/restapi-director-search.component';
-import { RestapiDirectorMovieByIdComponent } from './restapi-director/restapi-director-movie-by-id/restapi-director-movie-by-id.component'
+import { RestapiDirectorMovieByIdComponent } from './restapi-director/restapi-director-movie-by-id/restapi-director-movie-by-id.component';
+import { RestapiDirectorPostComponent } from './restapi-director/restapi-director-post/restapi-director-post.component';
+import { RestapiDirectorPutComponent } from './restapi-director/restapi-director-put/restapi-director-put.component';
+import { RestapiDirectorDelComponent } from './restapi-director/restapi-director-del/restapi-director-del.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +52,10 @@ import { RestapiDirectorMovieByIdComponent } from './restapi-director/restapi-di
     RestapidelComponent,
     RestapiDirectorComponent,
     RestapiDirectorSearchComponent,
-    RestapiDirectorMovieByIdComponent
+    RestapiDirectorMovieByIdComponent,
+    RestapiDirectorPostComponent,
+    RestapiDirectorPutComponent,
+    RestapiDirectorDelComponent
   ],
   imports: [
     BrowserModule,

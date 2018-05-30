@@ -14,9 +14,11 @@
                       </ul> 
                 <pagination-controls (pageChange)="p =$event"></pagination-controls>
                 Showing maximum 10 results
-                <div class="text-center py-4 mt-3">
-                    <button class="btn btn-cyan" (click)="showMore()" type="submit">Submit</button>
-                </div>
+                <br>
+                <button *ngIf="result" type="button" (click)="showLess()" class="btn btn-default">Go back</button>
+                
+                <!-- Default button -->
+                <button *ngIf="result" type="button" (click)="showMore()" class="btn btn-default">Show More</button>
         </div>
       </div>
   </div>

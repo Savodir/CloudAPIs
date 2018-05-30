@@ -1,0 +1,34 @@
+
+<div class="card">
+  <div class="card-body">
+
+      <form>
+          <p class="h4 text-center py-4">Add new director</p>
+
+          First Name
+          <div class="md-form">
+              <input type="text" [(ngModel)]="FirstName" name="something" id="materialFormCardNameEx" class="form-control">
+              <label for="materialFormCardNameEx" class="font-weight-light"></label>
+          </div>
+          Last Name
+          <div class="md-form"> 
+              <input type="text" [(ngModel)]="LastName" name="something" id="materialFormCardEmailEx" class="form-control">
+              <label for="materialFormCardEmailEx" class="font-weight-light"></label>
+          </div>
+          Birth Year
+          <div class="md-form">
+              <input type="text" [(ngModel)]="BirthYear" name="something" id="Genre" class="form-control">
+              <label for="materialFormCardConfirmEx" class="font-weight-light"></label>
+          </div>
+          <div class="text-center py-4 mt-3">
+              <button class="btn btn-cyan" (click)="Post()" type="submit">Submit</button>
+          </div>
+      </form>
+      <!-- Material form register -->
+
+  </div>
+  <!-- Card body -->
+
+</div>
+<!-- Card -->
+                    

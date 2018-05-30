@@ -1,0 +1,27 @@
+<div  class="card" style="text-align: center;">
+  Delete specific director
+    <div class="card-body">
+        <div class="table-wrapper-2">
+          Search for a director by entering an ID <br>
+          Als de director films heeft -> Eerst de films verwijderen of Deleten en continue in visual studio
+            <input type="text" class="form-control" [(ngModel)]="Search">
+            <div *ngIf = "result" class="wrapper1">
+                <ul>
+                        <h4>Current Value</h4>
+                        First Name:  
+                        {{result.firstName}}
+                        <br>
+                        Last Name: 
+                        {{result.lastName}} 
+                        <br>
+                        BirthYear:
+                        {{result.birthYear}}    
+                        <br>
+                        </ul> 
+          </div>
+        </div>
+        <div class="text-center py-4 mt-3">
+            <button class="btn btn-cyan" (click)="Delete()" type="submit">Delete</button>
+        </div>
+    </div>
+  </div>

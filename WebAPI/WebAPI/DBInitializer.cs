@@ -136,7 +136,7 @@ namespace WebAPI
                     Title = "My Best Friend's Birthday",
                     Year = "1987",
                     Type = "Comedy",
-                    director = listDirectors.ElementAt(4)
+                    director = listDirectors.ElementAt(3)
                 });
                 listMovies.Add(new Movie()
                 {

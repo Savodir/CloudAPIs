@@ -1,0 +1,32 @@
+<div  class="card" style="text-align: center;">
+  Update a specific director
+    <div class="card-body">
+        <div class="table-wrapper-2">
+          Search for a director by entering an ID
+            <input type="text" class="form-control" [(ngModel)]="Search">
+            <div *ngIf = "result" class="wrapper1">
+                <ul>
+                        <h4>Current Value</h4>
+                        First Name:  
+                        {{result.firstName}}
+                        <br>
+                        Last Name  
+                        {{result.lastName}} 
+                        <br>
+                        Birthyear
+                        {{result.birthYear}}    
+                        <br>
+                        <br>
+                        Fill in the fields below, then submit by using the Update button
+                        <br>
+                        First Name: <input type="text" [(ngModel)]="firstName" name="fname"><br>
+                        Last Name: <input type="text" [(ngModel)]="lastName" name="lname"><br>
+                        Birthyear: <input type="text" [(ngModel)]="birthYear" name="lname"><br>
+                        </ul> 
+          </div>
+        </div>
+        <div class="text-center py-4 mt-3">
+            <button class="btn btn-cyan" (click)="Put()" type="submit">Update</button>
+        </div>
+    </div>
+  </div>

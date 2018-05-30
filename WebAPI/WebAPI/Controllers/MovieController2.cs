@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,13 +19,17 @@ namespace WebAPI.Controllers
         [HttpGet]
         public List<Movie> getAllMovies()
         {
-            return context.movies.ToList();
+            List<Movie> list = new List<Movie>();
+            list = context.movies.Include(d => d.director).ToList();
+            return list;
         }
         [Route("i/{id}")]
         [HttpGet]
         public Movie getMovieID(int id)
         {
-            var movie = context.movies.Find(id);
+            var movie = context.movies
+                .Include(d => d.director)
+                .SingleOrDefault(d => d.ID == id);
             return movie;
         }
         [Route("t/{title}")]
@@ -46,7 +51,7 @@ namespace WebAPI.Controllers
         }
         [Route("d/{id}")]
         [HttpDelete]
-        public IActionResult deleteBook(int id)
+        public IActionResult deleteMovie(int id)
         {
             var movie = context.movies.Find(id);
             if (movie == null)
@@ -71,6 +76,30 @@ namespace WebAPI.Controllers
       
             context.SaveChanges();
             return Ok(orgMovie);
+        }
+        [Route("dir/{directorsID}")]
+        [HttpGet]
+        public List<Movie> getMovieTitlesByDirectorID(int directorsID, int? page = 0, string sort = "year", int length = 2, string dir = "asc")
+        {
+            IQueryable<Movie> query = context.movies;
+            var director = context.directors
+                              .SingleOrDefault(d => d.ID == directorsID);
+            query = query.Where(d => d.director == director);
+            if (dir == "asc")
+            {
+                query = query.OrderBy(d => d.Year);
+            }
+            else if (dir == "desc")
+            {
+                query = query.OrderByDescending(d => d.Year);
+            }
+            if (page.HasValue)
+            {
+                query = query.Skip(page.Value * length);
+            }
+            query = query.Take(length);
+            return query.ToList();
+
         }
     }
 }

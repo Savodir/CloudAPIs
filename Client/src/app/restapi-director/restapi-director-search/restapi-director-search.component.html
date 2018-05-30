@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    Search by specific Director's last name
+      <div class="table-wrapper-2">
+          <input type="text" class="form-control" [(ngModel)]="Search">
+          <table class="table table-responsive">
+              <thead class="mdb-color lighten-4">
+                  <tr>
+                      <th class="th-lg">ID</th>
+                      <th class="th-lg">First Name</th>
+                      <th class="th-lg">Last Name</th>
+                      <th class="th-lg">Birth Year</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of result">
+                      <td scope="row">{{item.id}}</td>
+                      <td>{{item.firstName}}</td>
+                      <td>{{item.lastName}}</td>
+                      <td>{{item.birthYear}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

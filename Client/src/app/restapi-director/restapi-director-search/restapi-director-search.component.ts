@@ -2,19 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-rest-apititle-search',
-  templateUrl: './rest-apititle-search.component.html',
-  styleUrls: ['./rest-apititle-search.component.scss']
+  selector: 'app-restapi-director-search',
+  templateUrl: './restapi-director-search.component.html',
+  styleUrls: ['./restapi-director-search.component.scss']
 })
-export class RestApititleSearchComponent implements OnInit {
+export class RestapiDirectorSearchComponent implements OnInit {
   result: any;
   private _search: string = ""  
   constructor(private http: HttpClient) { }
+
   ngOnInit() {
     this.searchTitle();
     }
   searchTitle() {
-    this.http.get(`http://localhost:50533/api/v2/movies`)
+    this.http.get(`http://localhost:50533/api/v2/directors`)
     .subscribe(
       (res: Response) => {
         this.result = res;
@@ -23,7 +24,7 @@ export class RestApititleSearchComponent implements OnInit {
     )
   }
   searchSpecificTitle(replaced: string) {
-    this.http.get(`http://localhost:50533/api/v2/movies/t/${replaced}`)
+    this.http.get(`http://localhost:50533/api/v2/directors/t/${replaced}`)
     .subscribe(
       (res: Response) => {
         this.result = res;

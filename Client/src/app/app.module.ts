@@ -25,6 +25,9 @@ import { RestApititleSearchComponent } from './rest-api/rest-apititle-search/res
 import { RestApipostComponent } from './rest-api/rest-apipost/rest-apipost.component';
 import { RestApiputComponent } from './rest-api/rest-apiput/rest-apiput.component';
 import { RestapidelComponent } from './rest-api/restapidel/restapidel.component';
+import { RestapiDirectorComponent } from './restapi-director/restapi-director.component'
+import {RestapiDirectorSearchComponent } from './restapi-director/restapi-director-search/restapi-director-search.component';
+import { RestapiDirectorMovieByIdComponent } from './restapi-director/restapi-director-movie-by-id/restapi-director-movie-by-id.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +46,10 @@ import { RestapidelComponent } from './rest-api/restapidel/restapidel.component'
     RestApititleSearchComponent,
     RestApipostComponent,
     RestApiputComponent,
-    RestapidelComponent
+    RestapidelComponent,
+    RestapiDirectorComponent,
+    RestapiDirectorSearchComponent,
+    RestapiDirectorMovieByIdComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +64,7 @@ import { RestapidelComponent } from './rest-api/restapidel/restapidel.component'
       {path: "imdbpagination", component: ImdbpaginationComponent},
       {path: "callback", component: CallbackComponent },
       {path: "restAPI", component: RestApiComponent},
+      {path: "restAPIDirector", component: RestapiDirectorComponent},
       {path: "", component: HomeComponent},
       {path: "**", component: PageNotFoundComponent}
     ]),

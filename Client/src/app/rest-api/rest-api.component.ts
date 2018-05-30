@@ -14,5 +14,4 @@ export class RestApiComponent implements OnInit {
   
   ngOnInit() {
   }
-
 }

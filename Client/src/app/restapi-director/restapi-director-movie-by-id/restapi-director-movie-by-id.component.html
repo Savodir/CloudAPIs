@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    Give a Director's ID to view all his movies
+      <div class="table-wrapper-2">          
+          <input type="text" class="form-control" [(ngModel)]="Search">
+          <div *ngIf="result">Showing Results for: {{result[0].director.firstName}}   {{result[0].director.lastName}}<br>
+         Results are shown by latest movie first 
+          </div>
+          
+          <table *ngIf="result" class="table table-responsive">
+              <thead class="mdb-color lighten-4">
+                  <tr>
+                      <th class="th-lg">ID</th>
+                      <th class="th-lg">Title</th>
+                      <th class="th-lg">Genre</th>
+                      <th class="th-lg">Year</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of result">
+                      <td scope="row">{{item.id}}</td>
+                      <td>{{item.title}}</td>
+                      <td>{{item.type}}</td>
+                      <td>{{item.year}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button *ngIf="result" type="button" (click)="showLess()" class="btn btn-default">Show Newer</button>
+
+<!-- Default button -->
+<button *ngIf="result" type="button" (click)="showMore()" class="btn btn-default">Show Older</button>
+  </div>
+</div>

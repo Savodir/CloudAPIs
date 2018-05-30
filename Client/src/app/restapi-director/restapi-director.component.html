@@ -1,0 +1,11 @@
+<div *ngIf="auth.isAuthenticated()" class="container">
+  <div class="row">
+      <div class="col-sm-6">
+          <app-restapi-director-search></app-restapi-director-search>
+      </div>
+      <div class="col-sm-6">
+        <app-restapi-director-movie-by-id></app-restapi-director-movie-by-id>
+    </div>
+</div>
+</div>
+<div *ngIf="!auth.isAuthenticated()"></div>

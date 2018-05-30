@@ -17,23 +17,39 @@
                 text-align: center;
               }
             </style>
-            <h1 style="text-align: center">Carl Vancluysen</h1>
             <h2>Gebruikte REST API</h2>       
             <h5><a href="http://www.omdbapi.com/">OMDB API</a></h5> 
             <br>
+            Functionaliteiten:
             <ol>
-              <li>Search for Specific title</li>
-              <li>Featured TV Show (Static)</li>
-              <li>Search by IMDB ID</li>
-              <li>Search by title w/ Pagination</li>
+              <li>
+                <h6>Search Filter/ via query string</h6>
+              IMDB Pagina -> Zoeken op specifieke titel</li>
+              <li><h6>Hypermedia? (Weinig info/API heeft geen hypermedia)</h6>
+                IMDB Pagina -> Static link naar poster via een url. Featured TV show
+              </li>
+              <li><h6>Opvragen via ID / IMDB ID</h6>
+                IMDB pagina -> Zoeken via IMDB ID
+              </li>
+              <li><h6>Opvragen via ID / IMDB ID</h6>
+                IMDB Pagination -> Zoeken op specifieke title -> Array list van 10 objecten, Show More/Less knoppen gebruiken voor naar extra pagina te gaan
+              </li>
             </ol>
             <h2>Eigen REST API</h2>
+            Zelfde thema -> Films en Directors
+            <br>
+            Beide controllers voldoen aan:
             <ol>
-              <li>a</li>
-              <li>b</li>
-              <li>c</li>
-              <li>d</li>
-            </ol>
+                <li>Ophalen Resource Lijst</li>
+                <li>Specifieke Titel/Director ophalen</li>
+                <li>Resource toevoegen</li>
+                <li>Resource verwijderen via ID</li>
+                <li>Resource aanpassen via ID</li>
+              </ol>
+              Pagination en Sorting staan op het ophalen van een filmlijst via directorID (Gebruik 4 voor een grote lijst en pagination) <br>
+              Data is beschikbaar via een DB Initializer, gebruikt gemaakt van MS SQL databank/EF Core. <br>
+              Die data heeft movies gelinked met directorID. <br>
+              Paginas zijn niet beschikbaar zonder gebruik te maken van Auth0 login. <br>
           </div>
         </div>
       </div>
